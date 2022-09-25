@@ -10,6 +10,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(@RequestParam(name="name", required = false, defaultValue = "World")String name, Model model) {
+        model.addAttribute("headerParam", "Header");
         model.addAttribute("name", name);
         return "home";
     }

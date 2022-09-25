@@ -5,7 +5,22 @@
     <title>Hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body>
-    <p th:text="'Hello, ' + ${name} + '!'" />
+<body style="margin:0px;">
+    <div>
+        <th:block th:replace="section/header :: headerFragment(${headerParam})"></th:block>
+        <div style="text-align: center;">
+            <p th:text="'Hello, ' + ${name} + '!'" />
+            <img src="image/test1.jpg"
+                 style="max-width:1000px; width: 100%;"/>
+        </div>
+        <th:block th:replace="section/footer :: footerFragment"></th:block>
+    </div>
 </body>
 </html>
+<script>
+    // Hedaer Onclick Button
+    function goHome(){
+        console.log("hello! go Home!!");
+        // location.href="/home"
+    }
+</script>

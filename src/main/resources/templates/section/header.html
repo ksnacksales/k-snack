@@ -1,0 +1,12 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="headerFragment(headerParam)">
+    <div style="display: flex;">
+        <!--    <img src="image/img_test1.jpg" width="100%"/>-->
+        <div onclick="goHome()" style="">
+            <h2 th:text="${headerParam}"></h2>
+        </div>
+
+    </div>
+</th:block>
+</html>
