@@ -1,12 +1,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <th:block th:fragment="headerFragment(headerParam)">
-    <div style="display: flex;">
-        <!--    <img src="image/img_test1.jpg" width="100%"/>-->
-        <div onclick="goHome()" style="">
-            <h2 th:text="${headerParam}"></h2>
-        </div>
+    <div style="display: flex; align-items:center;">
+        <img src="image/Logo.png" onclick="goHome()" style="padding: 20px; width: 150px;"/>
+        <div>
 
+        </div>
+        <ul class="menu">
+            <li th:each="item : ${headerParam}" th:data-index="${item}">
+                <a href="/" th:text="${item}" onclick="getMenu(this)"/>
+            </li>
+        </ul>
+
+        <ul th:each="item : ${headerParam}" th:data-index="${item}">
+            <li>
+
+            </li>
+        </ul>
     </div>
 </th:block>
 </html>

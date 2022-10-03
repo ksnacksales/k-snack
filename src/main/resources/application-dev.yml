@@ -1,0 +1,14 @@
+# 개발 환경
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://13.209.15.121:3306/ksnack?characterEncoding=utf8
+    username: admin
+    password: Korion//1235
+# mybatis
+mybatis:
+  config : mybatis-config.xml
+  type-aliases-package: com.ksnack.Dao.*
+  mapper-locations: mybatis/mapper/*.xml, mybatis/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

@@ -1,0 +1,67 @@
+/* HEADER */
+* {
+    padding: 0;
+    margin: 0
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px
+}
+
+.menu {
+    width: auto;
+    overflow: hidden;
+}
+
+.menu > li {
+    /*width: 20%; !*20*5=100%*!*/
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    padding: 10px 15px 10px 15px; /* 상 우 하 좌 */
+}
+
+.menu a {
+    font-weight: bold;
+    color: black;
+}
+
+.submenu > li {
+    line-height: 50px;
+    background-color: #94a9ff;
+}
+
+.submenu {
+    height: 0; /*ul의 높이를 안보이게 처리*/
+    overflow: hidden;
+}
+
+.menu > li:hover {
+    background-color: #94a9ff;
+
+    transition-duration: 0.5s;
+}
+
+.menu > li:hover .submenu {
+    height: 150px; /*서브메뉴 li한개의 높이 50*5*/
+    transition-duration: 1s;
+}
+
+/* HEADER */
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    align-items: center;
+    padding: 80px;
+    margin-top: 10px;
+    background: black;
+    color: white;
+}
+
+/* FOOTER */

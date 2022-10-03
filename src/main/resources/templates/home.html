@@ -5,22 +5,24 @@
     <title>Hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<script src="/js/header.js" defer></script>
 <body style="margin:0px;">
     <div>
+        <!-- HEADER -->
         <th:block th:replace="section/header :: headerFragment(${headerParam})"></th:block>
+        <!-- HEADER -->
+
+        <!-- Contents -->
         <div style="text-align: center;">
             <p th:text="'Hello, ' + ${name} + '!'" />
-            <img src="image/test1.jpg"
-                 style="max-width:1000px; width: 100%;"/>
+<!--            <img src="image/test1.jpg" style="max-width:1000px; width: 100%;"/>-->
         </div>
+        <!-- Contents -->
+
+        <!-- FOOTER -->
         <th:block th:replace="section/footer :: footerFragment"></th:block>
+        <!-- FOOTER -->
     </div>
 </body>
 </html>
-<script>
-    // Hedaer Onclick Button
-    function goHome(){
-        console.log("hello! go Home!!");
-        // location.href="/home"
-    }
-</script>
