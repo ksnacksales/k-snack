@@ -4,7 +4,9 @@ function goHome() {
 }
 
 function getMenu(item){
-    // console.log(item);
-    console.log(item.innerText);
+    console.log(item);
+    if(!item.value) {
+        console.log(item.innerText);
+    }
 
 }

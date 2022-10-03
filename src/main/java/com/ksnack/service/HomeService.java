@@ -1,6 +1,7 @@
 package com.ksnack.service;
 
 import com.ksnack.dao.HeaderMapper;
+import com.ksnack.dto.ProductSimple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,6 +53,39 @@ public class HomeService {
 //        subMenuList.put
 
         return subMenuList;
+    }
+
+    public List<ProductSimple> mainList1(){
+
+        List<ProductSimple> mainList1 = new ArrayList<ProductSimple>();
+
+        ProductSimple ps1 = new ProductSimple();
+        ProductSimple ps2 = new ProductSimple();
+        ProductSimple ps3 = new ProductSimple();
+
+        ps1.setName("jollypong");
+        ps1.setProductRating(0);
+        ps1.setReviewCnt(0);
+        ps1.setPrice(15.17);
+        ps1.setImgPath("image/main/jollypong.jpg");
+
+        ps2.setName("okksusukkang");
+        ps2.setProductRating(3);
+        ps2.setReviewCnt(20);
+        ps2.setPrice(22.11);
+        ps2.setImgPath("image/main/okksusukkang.jpg");
+
+        ps3.setName("potatokkang");
+        ps3.setProductRating(5);
+        ps3.setReviewCnt(100);
+        ps3.setPrice(8.5);
+        ps3.setImgPath("image/main/potatokkang.jpg");
+
+        mainList1.add(ps1);
+        mainList1.add(ps2);
+        mainList1.add(ps3);
+
+        return mainList1;
     }
 
 }

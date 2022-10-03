@@ -1,16 +1,16 @@
 /* HEADER */
 * {
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 li {
-    list-style: none
+    list-style: none;
 }
 
 a {
     text-decoration: none;
-    font-size: 20px
+    font-size: 20px;
 }
 
 .menu {
@@ -54,12 +54,61 @@ a {
 
 /* HEADER */
 
+/* MAIN CONTENTS */
+/* - 베스트 셀링 상품 */
+.best-selling-product {
+    display: flex;
+    padding: 5% 5% 5% 10%;
+}
+.best-selling-product .best-selling-product-text {
+    width: 50%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+/* - 간단한 설명이 포함된 컨텐츠 */
+.simple-contents {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.simple-contents .item-box {
+    width: 33%;
+    text-align: center;
+}
+
+.simple-contents .item-box .item-box-img {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.simple-contents .item-box .item-box-img .image {
+    width: 90%;
+    height: auto;
+}
+
+.simple-contents .item-box .item-box-text {
+    padding-left: 30%;
+    padding-right: 20%;
+    text-align: left;
+    line-height: 0.8em;
+}
+
+.product-rating {
+    width: 100%;
+    display: flex;
+}
+/* MAIN CONTENTS */
+
 /* FOOTER */
 .footer {
     text-align: center;
     align-items: center;
     padding: 80px;
-    margin-top: 10px;
+    margin-top: 50px;
     background: black;
     color: white;
 }

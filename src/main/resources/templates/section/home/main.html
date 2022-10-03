@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="mainContent(mainList, name)">
+    <!-- 좌우 꽉찬 이미지 -->
+    <div>
+        <img class="" src="image/main/mainContents2.png" style="width: 100%;">
+    </div>
+    <!-- 베스트 셀링 상품 -->
+    <div class="best-selling-product">
+        <img src="image/main/mainContents.png" style="width: 40%;"/>
+        <div class="best-selling-product-text">
+            <div>
+                <h2>text 추가 테스트</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- 간단한 설명이 포함된 컨텐츠 -->
+    <div class="simple-contents">
+        <div class="item-box" th:each="item : ${mainList}" th:data-item-box="${item}">
+            <!-- 이미지 -->
+            <div class="item-box-img">
+                <img class="image" th:src="${item.imgPath}" />
+            </div>
+            <!-- 텍스트 설명 -->
+            <div class="item-box-text">
+                <h2 th:text="${item.name}"/>
+                <br>
+                <div class="product-rating" th:each="item : ${item.productRating}">
+                    <img src="image/main/star.png" style="width: 15px;">
+                </div>
+                <br>
+                <div style="display: flex">
+                    <h2>$ </h2>
+                    <h2 th:text="${item.price}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

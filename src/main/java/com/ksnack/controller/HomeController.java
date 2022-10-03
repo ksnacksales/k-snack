@@ -20,6 +20,9 @@ public class HomeController {
         String nameStr = homeService.getData();
 
         model.addAttribute("headerParam", homeService.getHeaderList());
+
+        model.addAttribute("mainList", homeService.mainList1());    // 첫번째 박스
+
         model.addAttribute("name", nameStr);
         return "home";
     }
